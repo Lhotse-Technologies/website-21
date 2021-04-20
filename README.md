@@ -25,3 +25,4 @@
 
 # Links
 https://nextjs.org/
+https://tailwindcss.com/docs
