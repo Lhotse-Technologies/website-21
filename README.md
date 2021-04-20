@@ -13,6 +13,10 @@
 - yarn install
 - yarn dev
 
+# Milestones
+- Initial Setup (routing, meta tags, framework, cms integration)
+- Content blocks und page structure
+- Styling und Animationen  (bearbeitet) 
 
 # Rough Preview
 
