@@ -2,8 +2,14 @@ import Head from "next/head";
 
 import Image from "next/image";
 import { getPage } from "../lib/api";
+import en from "../locales/en";
+import de from "../locales/de";
+import { useRouter } from "next/router";
+
 
 export default function Home({ pageData }) {
+  const { locale } = useRouter();
+  const t = locale === "de" ? de : en;
   return (
     <>
       <Head>
@@ -12,6 +18,8 @@ export default function Home({ pageData }) {
       </Head>
 
       <HomeIntro content={pageData?.home?.content} />
+
+      <p>{t.test_lang}</p>
 
       <div className="h-64 grid md:grid-cols-3 grid-cols-1 gap-4 mt-12">
         <PostPreview>1</PostPreview>
