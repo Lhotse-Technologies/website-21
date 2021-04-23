@@ -43,8 +43,8 @@ const PostPreview = ({}) => (
   </div>
 );
 
-export async function getStaticProps() {
-  const pageData = await getPage("home");
+export async function getStaticProps({ locale, defaultLocale }) {
+  const pageData = await getPage("home", locale, defaultLocale);
 
   return {
     props: { pageData },
