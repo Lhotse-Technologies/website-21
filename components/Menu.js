@@ -1,18 +1,15 @@
-import Link from "next/link";
+import Link from 'next/link';
 
-import { useRouter } from "next/router";
+import { useRouter } from 'next/router';
 
-function Menu() {
+function Menu({ navItems, menuItems, callToActionButton }) {
   const { locale } = useRouter();
   return (
     <div className="container mx-auto">
       <header className="flex justify-between items-center py-8 md:px-12 px-4">
-        <Link href="/">
-          <>LHOTSE</>
-        </Link>
-        <Link href={"/"} locale={locale === "en" ? "de" : "en"}>
-          {locale}
-        </Link>
+        {menuItems.map((item, index) => (
+          <p key={index}>{item.title}</p>
+        ))}
       </header>
     </div>
   );

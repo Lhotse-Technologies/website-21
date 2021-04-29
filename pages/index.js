@@ -1,7 +1,5 @@
-import Head from "next/head";
-
-import Image from "next/image";
-import { getPage } from "../lib/api";
+import Head from 'next/head';
+import { getPage } from '../lib/api';
 
 export default function Home({ pageData }) {
   return (
@@ -33,9 +31,9 @@ const PostPreview = ({}) => (
     <div
       className="w-full p-12"
       style={{
-        background: "url(http://placehold.it/350)",
-        backgroundSize: "cover",
-        backgroundPosition: "center center",
+        background: 'url(http://placehold.it/350)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center center',
       }}
     />
     <hr className="p-0 m-0" />
@@ -44,7 +42,7 @@ const PostPreview = ({}) => (
 );
 
 export async function getStaticProps({ locale, defaultLocale }) {
-  const pageData = await getPage("home", locale, defaultLocale);
+  const pageData = await getPage('home', locale, defaultLocale);
 
   return {
     props: { pageData },
