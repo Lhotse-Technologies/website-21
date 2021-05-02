@@ -7,9 +7,18 @@ function Menu({ navItems, menuItems, callToActionButton }) {
   return (
     <div className="container mx-auto">
       <header className="flex justify-between items-center py-8 md:px-12 px-4">
-        {menuItems.map((item, index) => (
-          <p key={index}>{item.title}</p>
-        ))}
+
+      <Link href="/"><>LHOTSE</></Link>
+
+      {menuItems.map((item, index) => (
+        <Link href={`${item.route}`}><a key={index}>{item.title}</a></Link>
+      ))}
+
+      <Link href={"/"} locale={locale === "en" ? "de" : "en"}>
+        {locale}
+      </Link>
+
+      <button className="btn">{callToActionButton}</button>
       </header>
     </div>
   );

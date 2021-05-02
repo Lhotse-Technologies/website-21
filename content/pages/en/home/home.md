@@ -1,7 +1,7 @@
 ---
 var: 'Variable'
 menuItems:
-  [{ title: 'Home', route: '/' }, { title: 'Product', route: '/product' }]
+  [{ title: 'Home', route: '/' }, { title: 'Product', route: '/product' }, { title: 'Dialogue', route: '/dialogue' }, { title: 'About', route: '/about' } ]
 callToActionButton: 'Book Demo'
 ---
 
