@@ -15,7 +15,6 @@ export default function Home({ pageData }) {
       <div className="h-64 grid md:grid-cols-3 grid-cols-1 gap-4 mt-12">
         <PostPreview>2</PostPreview>
         <PostPreview>3</PostPreview>
-        <PostPreview>4</PostPreview>
         <PostPreview>5</PostPreview>
       </div>
     </>
