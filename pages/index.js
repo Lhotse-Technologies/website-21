@@ -1,6 +1,4 @@
 import Head from "next/head";
-
-import Image from "next/image";
 import { getPage } from "../lib/api";
 
 export default function Home({ pageData }) {
@@ -45,6 +43,7 @@ const PostPreview = ({}) => (
 
 export async function getStaticProps() {
   const pageData = await getPage("home");
+  console.log(pageData);
 
   return {
     props: { pageData },

@@ -5,7 +5,7 @@ function MyApp({ Component, pageProps, navItems }) {
   return (
     <>
       <Menu navItems={navItems} />
-      <div className="container mx-auto mt-12 px-12">
+      <div className="mt-12">
         <Component {...pageProps} />
       </div>
     </>
