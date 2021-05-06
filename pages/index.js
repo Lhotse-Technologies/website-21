@@ -4,10 +4,13 @@ import Image from "next/image";
 import { getPage } from "../lib/api";
 
 export default function Home({ pageData }) {
+
+  console.log(pageData?.meta?.meta);
   return (
     <>
       <Head>
         <title>{pageData?.meta?.data?.title}</title>
+      
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -23,6 +26,9 @@ export default function Home({ pageData }) {
     </>
   );
 }
+
+
+
 
 const HomeIntro = ({ content }) => (
   <div className="text-center" dangerouslySetInnerHTML={{ __html: content }} />
@@ -45,6 +51,7 @@ const PostPreview = ({}) => (
 
 export async function getStaticProps({ locale, defaultLocale }) {
   const pageData = await getPage("home", locale, defaultLocale);
+  console.log( pageData);
 
   return {
     props: { pageData },
