@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { getPage } from "../lib/api";
+import Image from "next/image";
 
 export default function Home({ pageData }) {
   return (
@@ -12,7 +13,6 @@ export default function Home({ pageData }) {
       <HomeIntro content={pageData?.home?.content} />
 
       <div className="h-64 grid md:grid-cols-3 grid-cols-1 gap-4 mt-12">
-        <PostPreview>1</PostPreview>
         <PostPreview>2</PostPreview>
         <PostPreview>3</PostPreview>
         <PostPreview>4</PostPreview>
@@ -28,14 +28,14 @@ const HomeIntro = ({ content }) => (
 
 const PostPreview = ({}) => (
   <div className="border-gray-900 rounded-md border text-center">
-    <div
-      className="w-full p-12"
-      style={{
-        background: "url(http://placehold.it/350)",
-        backgroundSize: "cover",
-        backgroundPosition: "center center",
-      }}
-    />
+    <div style={{ position: "relative", height: 400 }}>
+      <Image
+        src="/image.jpg"
+        alt="Picture of the author"
+        layout="fill"
+        objectFit="cover"
+      />
+    </div>
     <hr className="p-0 m-0" />
     Pretext
   </div>
