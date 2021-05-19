@@ -3,7 +3,33 @@ import Head from "next/head";
 import Image from "next/image";
 import { getPage } from "../lib/api";
 
+import Row from "../components/Row.js";
+import Column from "../components/Column.js";
+import Grid from "../components/Grid.js";
+
 export default function Home({ pageData }) {
+
+  const input = [
+    {
+      text: "Div 1"
+    },
+    {
+      text: "Div 2"
+    },
+    {
+      text: "Div 3"
+    },
+    {
+      text: "Div 4"
+    },
+    {
+      text: "Div 5"
+    },
+    {
+      text: "Div 6"
+    }
+  ];
+
   return (
     <>
       <Head>
@@ -13,13 +39,10 @@ export default function Home({ pageData }) {
 
       <HomeIntro content={pageData?.home?.content} />
 
-      <div className="h-64 grid md:grid-cols-3 grid-cols-1 gap-4 mt-12">
-        <PostPreview>1</PostPreview>
-        <PostPreview>2</PostPreview>
-        <PostPreview>3</PostPreview>
-        <PostPreview>4</PostPreview>
-        <PostPreview>5</PostPreview>
-      </div>
+      <Row input = {input} />
+      <Column input = {input} />
+      <Grid input = {input} />
+
     </>
   );
 }
