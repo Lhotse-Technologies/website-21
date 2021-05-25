@@ -1,0 +1,17 @@
+
+
+.triangle {
+	height: 600px;
+    left: 0;
+    background-position-y: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: translateY(-150px);
+    background-image: url('/layout/background-caret-left.svg');
+    background-position-x: left;
+}
+
+.triangle.left {
+    background-image: url('/layout/background-caret-right.svg');
+    background-position-x: right;
+}

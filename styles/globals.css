@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('./AppOverview.css');
+@import url('./ValueProposition.css');
+
 html,
 body {
   padding: 0;
